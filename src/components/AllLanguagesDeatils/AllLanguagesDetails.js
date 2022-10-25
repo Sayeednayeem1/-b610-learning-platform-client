@@ -5,16 +5,17 @@ const AllLanguagesDetails = ({ detail }) => {
     const { title, details, image } = detail;
     return (
         <div>
-            <Card className="text-center">
-                <Card.Header>{title}</Card.Header>
+            <Card className="text-center mb-5">
                 <Card.Body>
-                    <Card.Title>Special title treatment</Card.Title>
+                    <Card.Title>{title}</Card.Title>
+                    <Card.Img variant='top' src={image} height= "400px" width="300px" />
                     <Card.Text>
                         {details}
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-muted">2 days ago</Card.Footer>
             </Card>
+            <footer>this is a test</footer>
         </div>
     );
 };
