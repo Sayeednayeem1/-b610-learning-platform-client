@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Category from '../Category/Category';
 import Details from '../Details/Details';
 
 const Courses = () => {
@@ -28,7 +27,6 @@ const Courses = () => {
                         </div>
                     </Col>
                     <Col lg='8'>
-                        <h4>this is not  a test</h4>
                         <Details></Details>
                     </Col>
                 </Row>

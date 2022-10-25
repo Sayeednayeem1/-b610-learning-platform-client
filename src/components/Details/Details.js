@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import AllLanguagesDetails from '../AllLanguagesDeatils/AllLanguagesDetails';
 
 const Details = () => {
+    const [details, setDetails] = useState([]);
+    console.log(details);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/details')
+        .then(res => res.json())
+        .then(data => setDetails(data));
+    }, [])
+
     return (
         <div>
-            <h5>This is details</h5>
+            <div>
+                {
+                    details.map( detail => <AllLanguagesDetails
+                    key={details._id}
+                    detail={detail}
+                    ></AllLanguagesDetails>)
+                }
+            </div>
         </div>
     );
 };
