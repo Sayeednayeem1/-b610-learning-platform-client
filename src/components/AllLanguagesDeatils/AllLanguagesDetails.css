@@ -1,3 +1,19 @@
 .test{
     padding: 20px;
 }
+.accordion{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.faq{
+    background-color: #FFF0F5;
+}
+.self-adv{
+    margin-left: 75px;
+}
+.blog{
+    background-color: #FFF0F5;
+}
+.blog-padding{
+    padding: 120px;
+}
