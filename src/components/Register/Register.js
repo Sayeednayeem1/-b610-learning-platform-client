@@ -4,6 +4,7 @@ import { FaGoogle } from 'react-icons/fa';
 import Form from 'react-bootstrap/Form';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
 
@@ -63,6 +64,7 @@ const Register = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name='password' placeholder="password" required />
                 </Form.Group>
+                <p>Already have an accopunt? <Link to='/login'>Please Login</Link></p>
                 <Button variant="primary" type="submit">
                     Register
                 </Button>

@@ -32,10 +32,11 @@ const Header = () => {
                     <Navbar.Brand href="#codingAcademy">Coding Academy</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Link className='me-4' to='/home'>Home</Link>
-                        <Link className='me-4' to='/courses'>Courses</Link>
-                        <Link className='me-4' to='/faq'>FAQ</Link>
-                        <Link className='me-4' to='/blog'>Blog</Link>
+                        <Link className='me-4 text-white text-decoration-none ' to='/home'>Home</Link>
+                        <Link className='me-4 text-white text-decoration-none ' to='/courses'>Courses</Link>
+                        <Link className='me-4 text-white text-decoration-none ' to='/faq'>FAQ</Link>
+                        <Link className='me-4 text-white text-decoration-none ' to='/blog'>Blog</Link>
+                        <Link className='me-4 text-white text-decoration-none ' to='/checkout'>Checkout</Link>
                         {/* <Link className='me-4' to='/login'>Login</Link>
                         <Link className='me-4' to='/register'>Register</Link> */}
                         <Nav>

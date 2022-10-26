@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Details from '../Details/Details';
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import './courses.css'
 
 const Courses = () => {
     const [courses, setCourses] = useState([]);
@@ -13,8 +15,8 @@ const Courses = () => {
     }, [])
 
     return (
-        <div>
-            <Container>
+        <div className='courses'>
+            <Container className='courses-details'>
                 <Row>
                     <Col lg='4'>
                         <h5>Courses Available: {courses.length}</h5>
@@ -31,6 +33,14 @@ const Courses = () => {
                     </Col>
                 </Row>
             </Container>
+            <footer className='text-center bg-info p-4'>
+                <p><small>Alright reserved @2023</small></p>
+                <div>
+                    <FaFacebook className='fs-1'></FaFacebook>
+                    <FaTwitter className='ms-5 fs-1'></FaTwitter>
+                    <FaInstagram className='ms-5 fs-1'></FaInstagram>
+                </div>
+            </footer>
         </div>
     );
 };
