@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import DarkModeToggle from "react-dark-mode-toggle";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -13,6 +14,7 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 const Header = () => {
 
     const { user, logOut } = useContext(AuthContext);
+    const [isDarkMode, setIsDarkMode] = useState(() => false);
 
     const handleLogout = () => {
         logOut()
@@ -68,6 +70,11 @@ const Header = () => {
                                 }
                             </Nav.Link>
                         </Nav>
+                        <DarkModeToggle
+                            onChange={setIsDarkMode}
+                            checked={isDarkMode}
+                            size={80}
+                        />
                     </Navbar.Collapse>
 
                 </Container>

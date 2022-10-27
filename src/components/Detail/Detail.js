@@ -2,7 +2,6 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
-import Checkout from '../Checkout/Checkout';
 
 const Detail = ({ detail }) => {
     const { title, details, image } = detail;
