@@ -19,3 +19,25 @@
    padding: 100px;
    
 }
+.checkout-route{
+    background-color: 	#FFF0F5;
+}
+.container-checkout{
+    padding: 100px;
+}
+.footer-checkout{
+    padding: 40px;
+}
+.checkout-text{
+    padding: 60px;
+}
+.category-bg{
+    background-color: 	#FFF0F5;
+}
+.category-detail{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.category-footer{
+    padding: 60px;
+}

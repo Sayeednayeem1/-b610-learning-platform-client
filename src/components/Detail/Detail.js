@@ -8,13 +8,13 @@ const Detail = ({ detail }) => {
     const { title, details, image } = detail;
     return (
         <div>
-            <h2 className='mb-2 mx-auto text-primary text-center'>Details About {title}</h2>
+            <h2 className='mb-5 mx-auto text-primary text-center'>Details About {title}</h2>
             <Card className="text-center mb-5 h-25 c w-25 mx-auto">
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <Card.Img variant='top' src={image} alt="Responsive image" className="img-fluid" />
                     <Card.Text>
-                        {details}
+                        {details.slice(0, 100)}
                     </Card.Text>
                     <Button variant="success" detail={detail}><Link to='/checkout' className='text-decoration-none text-white'>Get
                         Premium Access</Link></Button>
