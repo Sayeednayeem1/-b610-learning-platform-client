@@ -6,7 +6,7 @@ const Details = () => {
     console.log(details);
 
     useEffect(() => {
-        fetch('http://localhost:5000/details')
+        fetch('https://assignment-10-server-pearl.vercel.app/details')
         .then(res => res.json())
         .then(data => setDetails(data));
     }, [])

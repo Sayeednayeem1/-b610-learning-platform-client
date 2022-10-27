@@ -9,7 +9,7 @@ const Courses = () => {
     const [courses, setCourses] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/language-categories')
+        fetch('https://assignment-10-server-pearl.vercel.app/language-categories')
         .then(res => res.json())
         .then(data => setCourses(data));
     }, [])
