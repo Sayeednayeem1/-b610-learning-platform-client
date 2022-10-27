@@ -4,15 +4,19 @@ import { FaGoogle } from 'react-icons/fa';
 import Form from 'react-bootstrap/Form';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Register = () => {
 
-    const {createUser, googleLogin} = useContext(AuthContext);
+    const { createUser, googleLogin } = useContext(AuthContext);
 
     const googleProvider = new GoogleAuthProvider();
+    const navigate = useNavigate();
+    const location = useLocation();
 
-    const handleSubmit = event =>{
+    const from = location.state?.from?.pathname || '/checkout';
+
+    const handleSubmit = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
@@ -22,25 +26,28 @@ const Register = () => {
         console.log(name, photoURL, email, password);
 
         createUser(email, password)
-        .then( result =>{
-            const user = result.user;
-            console.log(user);
-            form.reset();
-        })
-        .then( error => {
-            console.error(error);
-        })
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+
+                navigate(from, { replace: true });
+                form.reset();
+            })
+            .then(error => {
+                console.error(error);
+            })
     }
 
-    const handleGoogleLogin = () =>{
+    const handleGoogleLogin = () => {
         googleLogin(googleProvider)
-        .then( result => {
-            const user = result.user;
-            console.log(user);
-        })
-        .then( error => {
-            console.error(error);
-        });
+            .then(result => {
+                const user = result.user;
+                navigate(from, { replace: true });
+                console.log(user);
+            })
+            .then(error => {
+                console.error(error);
+            });
     }
 
     return (

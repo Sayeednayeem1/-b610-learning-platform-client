@@ -50,8 +50,8 @@ const Header = () => {
                                         </>
                                         :
                                         <>
-                                            <Link className='me-4' to='/login'>Login</Link>
-                                            <Link to='/register'>Register</Link>
+                                            <Link className="text-white text-decoration-none me-4" to='/login'>Login</Link>
+                                            <Link className="text-white text-decoration-none" to='/register'>Register</Link>
                                         </>
                                 }
                             </Nav.Link>

@@ -1,3 +1,32 @@
+# Website name => Coding Academy
+
+# Live website Link => 
+
+#Website features information.....
+
+1. => First of all in the home route there is some basic information about the courses.
+
+2. => In the Courses route there is 2 columns of information,
+        1. => about the courses category.
+        2. => All category details.
+
+3. => In the FAQ route there is some personal information about ho w to be a web developer.
+
+4. => In the Blog route there is some frequently asked questions an d answers.
+
+5. => In the Login Route there is a login form.....You can login to the website and use some private features..
+
+6. => In the register route the is a registration form. Anyone can register to the website filling up the registration form.
+
+
+7. => Finally I used React for building this website, and also React Bootstrap, Firebase, React Icons, React Router Dom, Cors, Express js, node js.....
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

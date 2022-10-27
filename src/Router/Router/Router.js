@@ -7,6 +7,7 @@ import Details from "../../components/Details/Details";
 import Faq from "../../components/Faq/Faq";
 import Home from "../../components/Home/Home";
 import Login from "../../components/Login/Login";
+import PageNotFound from "../../components/PageNotFound/PageNotFound";
 import Register from "../../components/Register/Register";
 import Main from "../../layouts/Main";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
@@ -62,6 +63,6 @@ export const routes = createBrowserRouter([
     },
     {
         path: '*',
-        element: <div className="text-danger text-center ">Route isn't found! 404! Please provide a better route!</div>
+        element: <PageNotFound></PageNotFound>
     }
 ])

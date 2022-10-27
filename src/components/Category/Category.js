@@ -7,12 +7,13 @@ const Category = () => {
     console.log(details);
     return (
         <div>
-            <div>
+            <div className='thistest'>
                 {
                     details.map(detail => <Detail
-                        key={detail.category_id
-                        }
+
+                        key={detail._id}
                         detail={detail}
+
                     ></Detail>)
                 }
             </div>
